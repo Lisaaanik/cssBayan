@@ -1,0 +1,114 @@
+body {
+    background-color: rgb(255, 192, 203);
+}
+
+.header {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Source Serif Pro', serif;    color: rgb(65, 15, 15);
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.container {
+    font-family: 'Source Serif Pro', serif;    max-width: 1500px;
+    color: rgb(65, 15, 15);
+    margin: auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background ease-in-out .4s;
+}
+
+p:hover {
+    color: white;
+}
+
+.memeTitle {
+    flex-direction: column;
+    display: flex;
+    cursor: pointer;
+    color:rgb(96, 18, 44);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color:rgb(96, 18, 44);
+    font-size: 2rem;
+    border-top: 2px solid #f8f8f88a;
+}
+
+input[type="radio" i] {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.open {
+    width: 6%;
+    opacity: 0;
+    background-image: url('../cssBayan/images/krestik.png');
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+}
+
+.content {
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease-in;
+    max-height: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.krestik {
+    height: 32px;
+    width: 32px;
+    background-image: url('../cssBayan/images/krestik.png');
+    background-size: 32px 32px;
+    margin-right: 120px;
+}
+
+.memeImg {
+    display: block;
+    margin: auto;
+    padding-bottom: 30px;
+    max-width: 40%;
+}
+
+.memeTitle input:checked ~ .content {
+    opacity: 1;
+    max-height: 150%;
+    transition: all 1s ease-in;
+}
+
+.memeTitle input:checked ~ .title {
+    color: white;
+}
+
+.mems:active .memeTitle .title {
+    color: white;
+}
+
+.mems:active .memeTitle .title .open {
+    background-image: url(../cssBayan/images/krestik.png);
+}
+
+.mems:active .memeTitle .content .memeImg {
+    filter: grayscale(50%);
+}
+
+.memeTitle input:checked + .title .open {
+    opacity: 1;
+    background-image: url(../cssBayan/images/krestik.png);
+}
+
+.mems:checked .memeTitle .title .open {
+    opacity: 1;
+}
